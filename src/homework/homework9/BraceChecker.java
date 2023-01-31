@@ -9,7 +9,7 @@ public class BraceChecker {
 
     public void check() {
         Stack st = new Stack();
-        for (int i = 0; i < text.length(); i++)
+        for (int i = 0; i < text.length(); i++) {
             switch (text.charAt(i)) {
                 case '(':
                 case '[':
@@ -19,24 +19,26 @@ public class BraceChecker {
                 case ')':
                     char a = st.pop();
                     if (a != '(') {
-                        System.out.print("Error: opened " + a + "but closed ) at " + i);
+                        System.out.print("Error: opened " + a + " but closed ) at " + i);
                     }
-                    continue;
+                    break;
                 case ']':
                     char b = st.pop();
                     if (b != '[') {
-                        System.out.print("Error: opened " + b + "but closed ] at " + i);
+                        System.out.print("Error: opened " + b + " but closed ] at " + i);
                     }
-                    continue;
+                    break;
                 case '}':
                     char c = st.pop();
                     if (c != '{') {
-                        System.out.print("Error: opened " + c + "but closed } at " + i);
+                        System.out.print("Error: opened " + c + " but closed } at " + i);
                     }
-                    continue;
+                    break;
             }
+        }
+        //  for (int i = 0; i < ; i++) {
+
+        //  }
     }
 }
-
-
 

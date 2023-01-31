@@ -65,7 +65,7 @@ public class DynamicArray {
     public void add(int index, int value) {
         if (index < 0 || index > size - 1) {
             System.out.println("такого индекса нету");
-            return;
+            extend();
         }
         for (int i = size; i > index; i--) {
             array[i] = array[i - 1];
@@ -74,7 +74,7 @@ public class DynamicArray {
         size++;
     }
 
-    public boolean exists(int value) {
+    public  boolean exists(int value) {
         for (int i = 0; i <= size - 1; i++) {
             if (value == array[i]) {
                 return true;
