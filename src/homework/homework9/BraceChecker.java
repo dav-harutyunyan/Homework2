@@ -36,9 +36,6 @@ public class BraceChecker {
                     break;
             }
         }
-        //  for (int i = 0; i < ; i++) {
-
-        //  }
     }
 }
 
